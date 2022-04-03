@@ -6,7 +6,7 @@ There should be description
 1.Download the source code
 
 '''bash
-git clone [link for github]
+git clone https://github.com/Islom27/todolist.git
 '''
 
 or just download the *.zip file
@@ -27,4 +27,4 @@ node app
 - pug
 
 ### Link to github repo
-[link for github] 
+https://github.com/Islom27/todolist.git

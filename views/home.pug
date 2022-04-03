@@ -1,0 +1,18 @@
+extends layout.pug 
+
+block number1
+    if error 
+        p.error Please fill the input
+
+    if success 
+        p.success Good job
+    form(action='/add' method='POST')
+        input.input(type='text' placeholder='Add your todo desription here...' name='todo')
+        button.btn Add  
+
+    div.todos
+        if todos.length
+            each todo in todos
+                p.todo #{ todo.description }
+        else
+            p.todo No any todo available

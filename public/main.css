@@ -1,97 +1,143 @@
-:root {
-    font-family: 'Open Sans', sans-serif;
-    font-family: 'Raleway', sans-serif;
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}   
+    font-family: "Fira sans", sans-serif;
+}
 
 .wrapper {
     max-width: 800px;
     margin: 50px auto;
 }
-
 .logo {
     text-align: center;
     font-size: 4rem;
 }
-
 .form {
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
-
 .input {
     display: inline-block;
     padding: 10px;
     font-size: 1.5rem;
     width: 80%;
-    border: 1px solid #ccc;
-    font-family: inherit;
+    border-radius: 1rem;
 }
-
 .btn {
     display: inline-block;
     padding: 10px 20px;
     font-size: 1.5rem;
-    width: 18%;
-    border: none; 
-    background: blue;
+    border: none;
+    background-color: rgb(151, 116, 184);
+    border-radius: 1rem;
     color: #fff;
+}
+
+.btn:hover {
+    background-color: white;
+    color: rgb(151, 116, 184);
 }
 
 .todos {
     margin-top: 25px;
-    border: 1px solid #ccc;
     padding: 10px;
+    border-radius: 1rem;
+}
+
+.todo:hover{
+    background-color: #fff;
+    transform: translateX(-1em);
+    border-radius: 0;
 }
 
 .todo {
+    position: relative;
+    padding: .75em 1em;
+    cursor: pointer;
+    background-color: rgb(151, 116, 184);
+    transition: .3s ease-in-out;
+    border-radius: 1rem;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    font-size: 1.5rem;
-    border-bottom: 1px dotted #ccc;
+    border: 1px solid #fff
 }
 
-.todo:last-child {
-    border-bottom: none;
+.todo::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #cccccc;
+    border-radius: 30%;
+    vertical-align: middle;
+    margin-right: .5em;
+} 
+
+.todo::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    background-color: rgb(151, 116, 184);
+    transition: .3s ease-in-out;
+} 
+
+.todo:hover::after {
+    width: 5px;
 }
 
-.todo:hover {
-    background: #eee;
+.todos .todo input[type=checkbox] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    visibility: hidden;    
 }
 
-.error, 
+.todos .todo .check {
+    position: absolute;
+    left: .7em;
+    top: .25em;
+    font-size: 1.7em;
+    color: rgb(151, 116, 184);
+    transition: .3s ease-in-out;
+    max-width: 30px;
+    max-height: 35px;
+}
+
+
+
+.error,
 .success {
     text-align: center;
     font-size: 1.4rem;
-    border: 1px solid #ccc;
-    padding: 10px;
     margin-bottom: 15px;
-}
-
-.error {
-    color: red;
-    border-color: red;
+    border-radius: 1rem;
 }
 
 .success {
     color: green;
-    border-color: green;
+    border: 1px solid green;
+}
+
+.error {
+    color: red;
+    border: 1px solid red;
 }
 
 .delete {
     text-decoration: none;
     font-size: 1rem;
-    padding: 5px 10px;
-    background: tomato;
-    color: #fff;
+    padding: 5px;
+    color: white;
+    border-radius: 1rem;
+}
+
+.delete:hover {
+    background-color: rgb(151, 116, 184);
 }
 
 .done,
@@ -102,4 +148,8 @@
 
 .done {
     text-decoration: line-through;
+}
+
+.text {
+    padding-top: 7em;
 }

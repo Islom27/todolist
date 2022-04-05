@@ -1,30 +1,23 @@
-# TO DO APPLICATION
+# TO DO APP
 
-There should be description
-
-### Instructions
-1.Download the source code
-
-```bash
+# Instructions
+# GIT
+1. Download the source code
 git clone https://github.com/Islom27/todolist.git
-```
 
-or just download the *.zip file
-
-2.Install deps
-
+# Install deps
 ```bash
 npm install
 ```
 
-3.Run the app
-```bash
+# Run the app
+``` bash 
 node app
 ```
 
-### Deps list
+# Deps list
 - express
 - pug
 
-### Link to github repo
+# Link to the github repo
 https://github.com/Islom27/todolist.git

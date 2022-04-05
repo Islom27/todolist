@@ -21,3 +21,6 @@ node app
 
 # Link to the github repo
 https://github.com/Islom27/todolist.git
+
+# Link to Glitch project
+https://nebulous-peat-saver.glitch.me/

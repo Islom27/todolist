@@ -85,18 +85,18 @@ app.get('/:id/update', (req, res) => {
 
     fs.readFile('./data/todo.json', (err, data) => {
         if (err) throw err
-        // Indetify the TODO to change 
+        //Finding the TODO to be changed 
         const todos = JSON.parse(data)
         const todo = todos.filter(todo => todo.id == id)[0]
 
-        //Getting it
+        //Getting that TODOs
         const todoIdx = todos.indexOf(todo)
         const splicedTodo = todos.splice(todoIdx, 1)[0]
 
-        //Changing the status
+        //Changing their status
         splicedTodo.done = true
 
-        //Adding it back
+        //Adding back those TODOs
         todos.push(splicedTodo)
 
         fs.writeFile('./data/todo.json', JSON.stringify(todos), (err) => {
